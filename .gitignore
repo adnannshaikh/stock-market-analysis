@@ -1,0 +1,31 @@
+# Virtual environment
+venv/
+
+# Compiled Python files
+__pycache__/
+*.py[cod]
+*.so
+
+# Environment variables
+.env
+
+# macOS system files
+.DS_Store
+
+# Logs & Debugging files
+*.log
+logs/
+
+# Jupyter Notebook checkpoints (if used)
+.ipynb_checkpoints/
+
+# PyCharm specific files
+.idea/
+.vscode/
+
+# Cache files
+*.cache
+*.pytest_cache/
+
+# Dependency files (if you use Poetry)
+poetry.lock
