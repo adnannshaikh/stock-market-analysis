@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import yfinance as yf
 import pandas as pd
 import requests
@@ -8,7 +9,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 nltk.download('vader_lexicon')
 
 app = Flask(__name__)
-
+CORS(app)
 NEWS_API_KEY = "51f49c3eb16247e5967b8c35ae79fd99"  # Replace with your API Key
 
 
