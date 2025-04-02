@@ -1,13 +1,30 @@
+/* Dark Mode Support */
+.dark-theme .card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-theme .btn {
+  color: white;
+}
+
+/* Card Hover Effects */
 .card {
-    border-radius: 12px;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  footer {
-    margin-top: 30px;
-  }
-  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.dark-theme footer {
+  color: #aaa;
+}

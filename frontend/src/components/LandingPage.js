@@ -1,17 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./LandingPage.css"; // Custom styles
+import "./LandingPage.css"; 
 
 function LandingPage() {
+  const [symbol, setSymbol] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    if (symbol.trim()) {
+      navigate(`/stock/${symbol.toUpperCase()}`);
+    }
+  };
+
   return (
     <div className="container text-center mt-5">
       <h1 className="mb-4">📊 Stock Market Sentiment Analyzer</h1>
       <p className="lead">Analyze market sentiment based on the latest news and trends.</p>
 
       <div className="row mt-4">
-        {/* Card 1: Market Sentiment */}
-        <div className="col-md-4">
+        {/* Market Sentiment Card */}
+        <div className="col-md-6 mb-3">
           <div className="card shadow-lg">
             <div className="card-body">
               <h5 className="card-title">📢 Market Sentiment</h5>
@@ -21,31 +30,31 @@ function LandingPage() {
           </div>
         </div>
 
-        {/* Card 2: Sign Up */}
-        <div className="col-md-4">
+        {/* Real-time Data with Search Box */}
+        <div className="col-md-6 mb-3">
           <div className="card shadow-lg">
             <div className="card-body">
-              <h5 className="card-title">📝 Sign Up</h5>
-              <p className="card-text">Create an account to track your stocks and market insights.</p>
-              <Link to="/signup" className="btn btn-success">Get Started</Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Card 3: Login */}
-        <div className="col-md-4">
-          <div className="card shadow-lg">
-            <div className="card-body">
-              <h5 className="card-title">🔐 Login</h5>
-              <p className="card-text">Already have an account? Login to access personalized insights.</p>
-              <Link to="/login" className="btn btn-dark">Login</Link>
+              <h5 className="card-title">📈 Real-Time Stock Data</h5>
+              <p className="card-text">Enter a stock symbol to view real-time data.</p>
+              <div className="input-group mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter Stock Symbol (e.g., AAPL)"
+                  value={symbol}
+                  onChange={(e) => setSymbol(e.target.value)}
+                />
+                <button className="btn btn-primary" onClick={handleSearch}>View Chart</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Footer */}
       <footer className="mt-5">
         <p className="text-muted">📈 Built for stock market enthusiasts.</p>
+        <p className="small">© {new Date().getFullYear()} Stock Market Analyzer. All Rights Reserved.</p>
       </footer>
     </div>
   );

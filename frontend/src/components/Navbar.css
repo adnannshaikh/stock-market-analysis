@@ -1,21 +1,33 @@
-/* Dark mode theme */
-body.dark-theme {
-    background-color: #121212;
-    color: white;
+/* Dark Mode Theme */
+.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+.navbar-dark .nav-link {
+  color: white !important;
+}
+
+.navbar-light .nav-link {
+  color: black !important;
+}
+
+/* Navbar Hover Effects */
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff !important;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
   }
-  
-  /* Light mode theme */
-  body {
-    background-color: white;
-    color: black;
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
   }
-  
-  /* Dark mode links */
-  .dark-theme .navbar {
-    background-color: #1e1e1e !important;
-  }
-  
-  .dark-theme a {
-    color: white !important;
-  }
-  
+}
