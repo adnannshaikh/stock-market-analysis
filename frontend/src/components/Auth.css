@@ -1,0 +1,22 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+  }
+  
+  .card h2 {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    border-radius: 8px;
+  }
+  

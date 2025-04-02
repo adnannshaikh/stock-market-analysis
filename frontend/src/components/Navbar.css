@@ -1,0 +1,21 @@
+/* Dark mode theme */
+body.dark-theme {
+    background-color: #121212;
+    color: white;
+  }
+  
+  /* Light mode theme */
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Dark mode links */
+  .dark-theme .navbar {
+    background-color: #1e1e1e !important;
+  }
+  
+  .dark-theme a {
+    color: white !important;
+  }
+  

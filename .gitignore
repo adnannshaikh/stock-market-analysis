@@ -35,5 +35,9 @@ yarn-error.log*
 /.jest/
 /coverage
 
+# PostgreSQL data files (if using Docker)
+pgdata/
+
 # Misc
 *.bak
+*.swp
